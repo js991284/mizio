@@ -1,0 +1,228 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------- CSS Variables ---------- */
+:root{
+    /* Color theme taken from  Adobe Color */
+    /* Color Theme Swatches in Hex */
+    /* Color Theme Swatches in Hex */
+--bt-red: #F21D2F;
+--med-red: #BF1725;
+--dk-red: #8C111B;
+--cream: #F3EDE1;
+--black: #0D0D0D;
+/* Other swatches for text & accents */
+--white: #fff;
+--lt-gray: #eaeaea;
+--med-gray: #555;
+--dk-gray: #222;
+    
+    
+
+/* Shadows for Elements that are Not Square */
+--filter-shadow-sm: drop-shadow(-3px 3px 7px var(--med-gray));
+--filter-shadow-lg: drop-shadow(-6px 6px 10px var(--med-gray));
+
+/* Adobe Font Family with Fallbacks */
+--fonts: "schwarzkopf-new", sans-serif;
+}
+
+/* ---------- Body Styles ---------- */
+/* TO DO */
+body {
+    background-color: var(--bt-red);
+    background-image: url('images/background.png');
+    color: var(--black);
+    line-height: 1.5;
+    font-family: var(--fonts);
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+body::after{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: opacity(30%);
+    z-index: -1;
+}
+
+header {
+    
+    padding: 2rem 1rem 5rem;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 227px;
+    margin: 0 auto;
+}
+
+/* Logo Image Styles  */
+header img{
+    float: left;
+    filter: var(--filter-shadow-lg);
+    margin-right: -8rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    max-width: 90px;
+}
+
+/* ---------- H1 Styles ---------- */
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin:0;
+    font-family: var(--fonts);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ---------- Link Styles ---------- */
+a {
+    display: block;
+    padding: 1rem;
+    color: var(--dk-gray);
+}
+
+/* ---------- Navigation Styles ---------- */
+nav {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+/* ---------- Nav Ul Styles --------- */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0rem;
+    padding: 0;
+}
+
+/* ---------- Nav Li Styles --------- */
+nav li {
+    float: left;
+    margin: 0 0.5rem;
+    width: 200px;
+}
+
+/* ---------- Nav a Styles --------- */
+nav a {
+    background-color: var(--med-red);
+    color: var(--dk-gray);
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    filter: var(--filter-shadow-lg);
+}
+
+/* ---------- Navigation a Hover Styles ---------- */
+nav a:hover{
+    background-color: var(--dk-red);
+    filter: var(--filter-shadow-sm);
+}
+
+/* ---------- Main Styles ---------- */
+main {
+    display: flex;
+    justify-content: center;
+    clear: both;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 946px;
+    margin: 0 auto;
+}
+
+/* ---------- Section Styles ---------- */
+main > section {
+    padding: 4rem 0;
+}
+
+/* ---------- H2 Styles ---------- */
+h2 {
+    text-align: center;
+    line-height: 46px;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    font-family: var(--fonts);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ---------- Paragraph Styles ---------- */
+p {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/* For the paragraph under the h2 in the main */
+main > p {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* ---------- Footer Styles ---------- */
+footer {
+    padding: 4rem 1rem 2rem;
+    line-height: 2.3rem;
+    color: var(--black);
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 75px;
+    margin: 0 auto;
+}
